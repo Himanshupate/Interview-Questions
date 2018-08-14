@@ -1,0 +1,11 @@
+#include <iostream>
+#include<stdio.h>
+using namespace std;
+
+int main() {
+	int min= 10000000,no = 0,x =0; 
+	while(cin>>x){ 
+	    if(x<min){ min = x; } no++;    }
+	printf("%d ", min*10*no);
+	
+}
