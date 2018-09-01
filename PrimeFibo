@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+// provide the nth element od the series
+int fib(int n)
+{
+   if (n <= 1)
+      return n;
+   return fib(n-1) + fib(n-2);
+}
+int checkprime(int n){
+    int j=2,y=2,flag;
+    for(int i = 0 ; i<n; i++){
+        
+        for(; ; ){
+            flag = 0;
+            for(int k=2;k<j;k++){
+                if(j%k == 0){
+                    flag = 0;
+                    break;
+                }
+                else flag = 1;
+            }
+            if(flag == 1){
+                y = j;
+            }
+            j++;
+         if(j == (y+1))  break;
+        }
+        
+        
+    }
+    return y;
+}
+
+int main() {
+    int i = 0, j , n , k;
+    //int a[2];
+    cin>>k;
+    if(k%2 == 0) cout<<checkprime(k/2 )<<" ";
+    else cout<<fib((k +1)/2)<<" ";
+    
+}
